@@ -7,8 +7,7 @@ document.getElementById("formLogin").addEventListener("submit", async (e) => {
   const res = await iniciarSesion(email, password);
 
   if (res.ok) {
-    mostrarMensaje("¡Sesión iniciada!", "success");
-    // TODO: redirigir a la página principal, ej: window.location.href = "dashboard.html";
+    window.location.href = "productos.html";
   } else {
     mostrarMensaje(res.error);
   }
